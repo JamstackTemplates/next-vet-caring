@@ -1,0 +1,19 @@
+{
+  "name": "Caring vet clinic",
+  "description": "A warm, leaf-green theme for veterinary clinics: services with species filters and from-prices, a vets-and-nurses team with clinic days, a monthly pet health plan shown as a stamped record card, after-hours emergency guidance, a live open-now status and a Jamstacks contact component for appointment enquiries.",
+  "tech": "next",
+  "type": "vet",
+  "style": "caring",
+  "internal": false,
+  "components": [
+    "support-form"
+  ],
+  "configFile": "site.config.json",
+  "screenshots": {
+    "light": "jamstacks/home-light.jpg",
+    "dark": "jamstacks/home-dark.jpg",
+    "theme": {
+      "strategy": "media"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "templateId": "next-vet-caring",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fullPage": false,
+  "captures": [
+    {
+      "mode": "light",
+      "sha256": "084d6a81cedb58a75c8e07ced4251d4d7ca954c67bc06fd02c5a389b5664234d",
+      "file": "jamstacks/home-light.jpg",
+      "bytes": 208294
+    },
+    {
+      "mode": "dark",
+      "sha256": "5dd22259e887650ff61a156b78837ebc23e013701c3b7051e240c52ce385842d",
+      "file": "jamstacks/home-dark.jpg",
+      "bytes": 196068
+    }
+  ]
+}

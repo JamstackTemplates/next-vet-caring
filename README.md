@@ -58,6 +58,10 @@ values plus `@theme inline` mappings. Keep the hosted form's primary fill dark e
 Keyboard focus, reduced motion and print styles are included. The footer credit is yours to keep,
 reword or remove.
 
+To replace the home hero, update `app/art/vet-light.webp` and `app/art/vet-dark.webp`.
+Use matching 4:3 landscape compositions and keep the focal subject near the centre for the
+tighter mobile crop. Update the image description in `components/home-sections.tsx` if the scene changes.
+
 For a business with visiting hours, add address/directions/hours to typed content, set the IANA `timeZone`
 in site.config.json and use optional `GoogleMap`, `TimeZoneNote` and `OpenBadge` components. GoogleMap
 accepts an address and descriptive title; map helpers need no key. `OpenBadge` accepts seven

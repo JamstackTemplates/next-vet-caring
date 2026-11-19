@@ -1,7 +1,8 @@
 {
-  "name": "Jamstacks starter",
-  "description": "A neutral Next.js foundation for Jamstacks websites.",
-  "domain": "",
+  "name": "Willow Paws Vet Clinic",
+  "description": "Willow Paws Vet Clinic is a warm, independent vet beside Laurelhurst Park in Portland caring for dogs, cats, rabbits and small pets, with a monthly Pet Health Plan and clear after-hours emergency advice.",
+  "domain": "next-vet-caring.jamstacks.net",
+  "timeZone": "America/Los_Angeles",
   "jamstacks": {
     "siteId": "",
     "cdnUrl": "https://cdn.jamstacks.net"

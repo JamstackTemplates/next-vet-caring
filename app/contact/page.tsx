@@ -1,34 +1,51 @@
 import type { Metadata } from 'next';
-import { business } from '../../content/business';
-import { CopyEmail } from '../../components/copy-email';
-import { JamstacksSupportForm } from '../../components/jamstacks-support-form';
+import {
+  ContactEmergencyNotice,
+  ContactWorkspace,
+} from '../../components/contact-sections';
 import { PageHead } from '../../components/page-head';
+import { business } from '../../content/business';
 import { absoluteUrl } from '../../lib/paths';
 import { site } from '../../lib/site';
 
-export const metadata: Metadata = { title: 'Contact', description: business.enquiries.introduction,
-  alternates: { canonical: absoluteUrl('/contact/') } };
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: business.enquiries.introduction,
+  alternates: { canonical: absoluteUrl('/contact/') },
+};
 
 export default function ContactPage() {
   const hosted = Boolean(site.jamstacksSite && site.jamstacksEmbedUrl);
-  return <>
-    <PageHead eyebrow="Contact" title={business.enquiries.title}><p>{business.enquiries.introduction}</p></PageHead>
-    <div className="wrap grid gap-10 pb-12 md:grid-cols-2">
-      <section aria-label="Enquiry form">
-        {hosted ? <JamstacksSupportForm siteId={site.jamstacksSite} embedUrl={site.jamstacksEmbedUrl} email={business.email} />
-          : <div className="rounded-ui border border-line bg-surface p-6">
-            <h2 className="text-xl font-bold">Write to us directly</h2>
-            <p className="mt-3 text-muted">The enquiry form is not connected. Please use the email address alongside.</p>
-          </div>}
-      </section>
-      <aside aria-label="Contact details" className="grid content-start gap-4">
-        <h2 className="text-xl font-bold">Email</h2>
-        <a className="text-link wrap-anywhere" href={`mailto:${business.email}`}>{business.email}</a>
-        <div className="flex flex-wrap items-center gap-3"><CopyEmail email={business.email} /></div>
-        {business.phone ? <p><a className="text-link" href={`tel:${business.phone.replace(/[^\d+]/g, '')}`}>{business.phone}</a></p> : null}
-        <h2 className="mt-3 text-xl font-bold">Useful to include</h2>
-        <ul className="list-disc space-y-2 pl-5 text-muted">{business.enquiries.usefulToInclude.map(tip => <li key={tip}>{tip}</li>)}</ul>
-      </aside>
-    </div>
-  </>;
+
+  return (
+    <>
+      <PageHead eyebrow="Contact & enquiries" title="Request an appointment or ask a question">
+        <p className="m-0">
+          Use this page for routine appointment requests, new-patient registration, Pet Health
+          Plan questions and records transfers from another clinic. We’ll reply to confirm a
+          time.
+        </p>
+      </PageHead>
+
+      <ContactEmergencyNotice
+        heading="Not for emergencies."
+        body={`If your pet needs urgent help, call us during opening hours on ${business.phone} or ${business.emergencyPartner.name} at`}
+        afterHoursLinkLabel="After-hours help →"
+      />
+
+      <ContactWorkspace
+        hosted={hosted}
+        siteId={site.jamstacksSite}
+        embedUrl={site.jamstacksEmbedUrl}
+        formCardHeading="Send an enquiry"
+        formCardReplyNote="Appointments and Pet Health Plan requests are enquiries only — we’ll reply to confirm a time and never take online bookings or payments here."
+        fallbackHeading="Write to us by email"
+        fallbackBody="The hosted enquiry form is not connected on this preview. Send your appointment or Pet Health Plan request directly to our clinic inbox and we’ll reply to confirm a time:"
+        guidanceHeading="Helpful notes to pop in your message:"
+        guidanceItems={business.enquiries.usefulToInclude}
+        detailsHeading="Clinic details"
+        directionsHeading="Directions from Laurelhurst Park"
+      />
+    </>
+  );
 }

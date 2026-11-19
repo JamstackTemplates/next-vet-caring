@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#2457a7"/><path d="M17 20h30v24H17zM24 14v36M40 14v36" fill="none" stroke="#fff" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Willow Paws Vet Clinic">
+  <rect width="64" height="64" rx="16" fill="#F6F3E7"/>
+  <rect x="3" y="3" width="58" height="58" rx="13" fill="none" stroke="#2E7A3E" stroke-width="3"/>
+  <!-- Four paw toes in apricot -->
+  <ellipse cx="16.5" cy="27" rx="5.2" ry="6.8" transform="rotate(-18 16.5 27)" fill="#E58E54" stroke="#1E2B22" stroke-width="2.2"/>
+  <ellipse cx="26.5" cy="18.5" rx="5.2" ry="7" transform="rotate(-6 26.5 18.5)" fill="#E58E54" stroke="#1E2B22" stroke-width="2.2"/>
+  <ellipse cx="38" cy="18.5" rx="5.2" ry="7" transform="rotate(7 38 18.5)" fill="#E58E54" stroke="#1E2B22" stroke-width="2.2"/>
+  <ellipse cx="47.5" cy="27" rx="5.2" ry="6.8" transform="rotate(19 47.5 27)" fill="#E58E54" stroke="#1E2B22" stroke-width="2.2"/>
+  <!-- Main pad shaped like a willow leaf -->
+  <path d="M32 29 C43 29, 50 37, 46 47 C43 53, 35 55, 32 52 C29 55, 21 53, 18 47 C14 37, 21 29, 32 29 Z" fill="#2E7A3E" stroke="#1E2B22" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M32 32 C32 38, 32 45, 32 51 M32 39 L26 43 M32 42 L38 45" fill="none" stroke="#F6F3E7" stroke-width="2" stroke-linecap="round"/>
+</svg>
